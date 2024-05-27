@@ -26,6 +26,7 @@
                 margin: 0;
                 font-size: 3em;
                 color: #18bcf2; /* Gleiche Farbe wie der Home Assistant-Button */
+                cursor: pointer; /* Macht den Titel anklickbar */
             }
 
         .content {
@@ -113,7 +114,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>PaperTobi</h1>
+        <h1 onclick="window.location.href='index.html'">PaperTobi</h1>
     </div>
     <div class="content">
         <div class="button-container">
@@ -122,11 +123,11 @@
             <button class="button button-project2">Projekt 2</button>
         </div>
         <div class="image-container">
-            <img src="logos/PaperTobi.png" alt="error">
+            <img src="logos/PaperTobi.png" alt="PaperTobi Logo">
         </div>
     </div>
     <div class="dock">
-        <button onclick="window.location.href='#'">Impressum</button>
+        <button onclick="window.location.href='impressum.html'">Impressum</button>
         <button onclick="window.location.href='#'">Kontakt</button>
         <button onclick="window.location.href='#'">Datenschutz</button>
     </div>

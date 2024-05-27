@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webseite mit Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button-home:hover {
+            background-color: #00f;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 0, 255, 0.5);
+        }
+
+        .button-project1 {
+            background-color: green;
+        }
+
+        .button-project1:hover {
+            background-color: #0f0;
+            transform: rotate(10deg);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .button-project2 {
+            background-color: red;
+        }
+
+        .button-project2:hover {
+            background-color: #f00;
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button button-home">Home Assistant</button>
+        <button class="button button-project1">Projekt 1</button>
+        <button class="button button-project2">Projekt 2</button>
+    </div>
+</body>
+</html>

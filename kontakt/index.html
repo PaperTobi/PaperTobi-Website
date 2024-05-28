@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
-<link rel="icon" type="image/x-icon" href="/logos/PaperTobi.ico">
-<meta charset="UTF-8">
 <head>
+    <link rel="icon" type="image/x-icon" href="/logos/Minecraft.ico">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <style>
@@ -26,8 +26,8 @@
         .header h1 {
             margin: 0;
             font-size: 3em;
-            color: #18bcf2; /* Gleiche Farbe wie der Home Assistant-Button */
-            cursor: pointer; /* Macht den Titel anklickbar */
+            color: #18bcf2;
+            cursor: pointer;
         }
 
         .content {
@@ -40,7 +40,7 @@
             padding: 20px;
         }
 
-        .impressum-section {
+        .contact-info {
             background-color: #1e1e1e;
             padding: 20px;
             border-radius: 10px;
@@ -48,13 +48,28 @@
             width: 100%;
         }
 
-        .impressum-section h2 {
-            margin-top: 0;
+        .contact-info h2 {
             color: #18bcf2;
+            margin-top: 0;
         }
 
-        .impressum-section p {
+        .contact-info p {
             margin: 10px 0;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #18bcf2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0a95c2;
         }
 
         .dock {
@@ -83,24 +98,6 @@
         .dock button:hover {
             background-color: #444;
         }
-
-        .contact-info {
-            text-align: center;
-        }
-
-        .contact-info p {
-            margin: 10px 0;
-        }
-
-        .contact-info a {
-            color: #18bcf2;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: #0a95c2;
-        }
     </style>
 </head>
 <body>
@@ -109,20 +106,16 @@
         <h2>Kontakt</h2>
     </div>
     <div class="content">
-        <div class="impressum-section">
-
-            <h2>Kontakt</h2>
-            <div class="contact-info">
-                <p>Discord: PaperTobi</p>
-                <p>Discord Server: <a href="https://discord.gg/H6TFVg4tK6" target="_blank">discord.gg/H6TFVg4tK6</a></p>
-                <p>E-Mail: <a href="mailto:contact-papertobi@proton.me">contact-papertobi@proton.me</a></p>
-            </div>
-
+        <div class="contact-info">
+            <h2>Kontaktdaten</h2>
+            <p>Email: kontakt@papertobi.de</p>
+            <p>Telefon: +49 123 456789</p>
+            <p>Adresse: Musterstraße 1, 12345 Musterstadt, Deutschland</p>
         </div>
     </div>
     <div class="dock">
-        <button onclick="window.location.href='kontakt.html'">Kontakt</button>
         <button onclick="window.location.href='#'">Datenschutz</button>
+        <button onclick="window.location.href='../minecraft/index.html'">Minecraft</button>
     </div>
 </body>
 </html>

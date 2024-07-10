@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>PaperTobi Footer</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.papertobi.de/logos/PaperTobi.ico">
+    <style>
+        /* Basic body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Dock styling (bottom fixed bar) */
+        .dock {
+            width: 100%;
+            background-color: #1e1e1e;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .dock button,
+        .dock a {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none; /* Ensure no underline for links */
+        }
+
+        .dock button:hover,
+        .dock a:hover {
+            background-color: #444;
+        }
+
+        .button-mastodon:hover {
+            background-color: #6364ff;
+            box-shadow: 0 0 15px rgba(99, 100, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Dock (fixed footer) section -->
+    <div class="dock">
+        <button onclick="window.location.href='../kontakt'">Kontakt</button>
+        <button onclick="window.location.href='..'">Datenschutz</button>
+        <a class="button-mastodon" href="https://mastodon.social/@PaperTobi" rel="me">Mastodon</a>
+    </div>
+</body>
+</html>
+

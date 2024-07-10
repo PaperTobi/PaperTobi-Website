@@ -84,11 +84,6 @@
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
         }
 
-        .button-mastodon:hover {
-            background-color: #6364ff;
-            box-shadow: 0 0 15px rgba(99, 100, 255, 0.5);
-        }
-
         /* Image container styling */
         .image-container {
             margin: 20px 0;
@@ -100,32 +95,11 @@
             border-radius: 10px;
         }
 
-        /* Dock styling (bottom fixed bar) */
-        .dock {
+        /* IFrame styling for the footer */
+        .footer-frame {
             width: 100%;
-            background-color: #1e1e1e;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            position: fixed;
-            bottom: 0;
-        }
-
-        .dock button {
-            padding: 10px 15px;
-            font-size: 16px;
-            color: white;
-            background-color: #333;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .dock button:hover {
-            background-color: #444;
+            height: 80px; /* Adjust height if needed */
         }
 
         /* Toggle switch styling */
@@ -176,12 +150,8 @@
         </div>
     </div>
 
-    <!-- Dock (fixed footer) section -->
-    <div class="dock">
-        <button onclick="window.location.href='../kontakt'">Kontakt</button>
-        <button onclick="window.location.href='..'">Datenschutz</button>
-        <a class="button button-mastodon" href="https://mastodon.social/@PaperTobi" rel="me">Mastodon</a>
-    </div>
+    <!-- Footer frame section -->
+    <iframe src="footer.html" class="footer-frame"></iframe>
 
     <!-- Dark/Light Mode Switch -->
     <div class="mode-switch">

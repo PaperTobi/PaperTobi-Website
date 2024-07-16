@@ -67,13 +67,14 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 25px;
+            top: 100%; /* Ensures the dropdown appears below the menu item */
             left: 0;
             background-color: #1e1e1e;
-            border-radius: 5px;
+            border-radius: 10px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
             animation: fadeIn 0.3s ease;
+            overflow: hidden;
         }
 
         .dropdown-content a {
@@ -82,11 +83,13 @@
             text-decoration: none;
             display: block;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .dropdown-content a:hover {
             background-color: #575757;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
         .menu-item:hover .dropdown-content {

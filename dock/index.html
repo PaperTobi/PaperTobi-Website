@@ -2,24 +2,106 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dock Seite</title>
+    <title>PaperTobi - Dock</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.papertobi.de/logos/PaperTobi.ico">
     <style>
+        /* Basic body styling */
         body {
-            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #ffffff;
             margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .dock {
-            background-color: #333;
-            padding: 10px;
-            color: white;
+
+        /* Header styling */
+        .header {
             text-align: center;
+            margin-top: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #18bcf2; 
+            cursor: pointer;
+        }
+
+        /* Main content area styling */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Button container styling */
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* General button styling */
+        .button {
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            background-color: #1e1e1e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none; /* Ensure no underline */
+            display: flex;
+            align-items: center; /* Center align text and any icons */
+        }
+
+        .button:hover {
+            transform: rotate(10deg);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Specific button hover effects */
+        .button-home:hover {
+            background-color: #18bcf2;
+            box-shadow: 0 0 15px #18bcf2;
+        }
+
+        .button-contact:hover {
+            background-color: #ff1493;
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+        }
+
+        /* IFrame styling for the dock content */
+        .dock-frame {
+            width: 100%;
+            border: none;
+            height: calc(100vh - 200px); /* Adjust height to fit the page */
+            overflow: hidden; /* Prevent scrolling */
         }
     </style>
 </head>
 <body>
-    <div class="dock">
-        <h1>Willkommen auf meiner Seite</h1>
+    <!-- Header section -->
+    <div class="header">
+        <h1 onclick="window.location.href='index.html'">PaperTobi</h1>
+    </div>
+
+    <!-- Main content section -->
+    <div class="content">
+        <iframe src="../dock" class="dock-frame"></iframe>
+    </div>
+
+    <!-- Button container for contact -->
+    <div class="button-container">
+        <button class="button button-contact" onclick="window.location.href='mailto:kontakt@papertobi.de'">Kontakt</button>
     </div>
 </body>
 </html>

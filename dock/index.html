@@ -2,13 +2,11 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>PaperTobi - Dock</title>
-    <link rel="icon" type="image/x-icon" href="https://cdn.papertobi.de/logos/PaperTobi.ico">
+    <title>Dock</title>
     <style>
         /* Basic body styling */
         body {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -16,36 +14,13 @@
             color: #ffffff;
             margin: 0;
             font-family: Arial, sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Header styling */
-        .header {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #18bcf2;
-            cursor: pointer;
-        }
-
-        /* Main content area styling */
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
         /* Button container styling */
         .button-container {
             display: flex;
-            gap: 20px;
-            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
         }
 
         /* General button styling */
@@ -68,7 +43,6 @@
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
-        /* Specific button hover effects */
         .button-contact:hover {
             background-color: #ff1493;
             box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
@@ -76,12 +50,6 @@
     </style>
 </head>
 <body>
-    <!-- Main content section -->
-    <div class="content">
-        <iframe src="../dock" class="dock-frame"></iframe>
-    </div>
-
-    <!-- Button container for contact -->
     <div class="button-container">
         <button class="button button-contact" onclick="window.location.href='mailto:kontakt@papertobi.de'">Kontakt</button>
     </div>

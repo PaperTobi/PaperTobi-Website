@@ -9,7 +9,7 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #121212;
@@ -28,7 +28,7 @@
         .header h1 {
             margin: 0;
             font-size: 3em;
-            color: #18bcf2; 
+            color: #18bcf2;
             cursor: pointer;
         }
 
@@ -69,31 +69,13 @@
         }
 
         /* Specific button hover effects */
-        .button-home:hover {
-            background-color: #18bcf2;
-            box-shadow: 0 0 15px #18bcf2;
-        }
-
         .button-contact:hover {
             background-color: #ff1493;
             box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
         }
-
-        /* IFrame styling for the dock content */
-        .dock-frame {
-            width: 100%;
-            border: none;
-            height: calc(100vh - 200px); /* Adjust height to fit the page */
-            overflow: hidden; /* Prevent scrolling */
-        }
     </style>
 </head>
 <body>
-    <!-- Header section -->
-    <div class="header">
-        <h1 onclick="window.location.href='index.html'">PaperTobi</h1>
-    </div>
-
     <!-- Main content section -->
     <div class="content">
         <iframe src="../dock" class="dock-frame"></iframe>

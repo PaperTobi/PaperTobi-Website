@@ -100,35 +100,7 @@
             width: 100%;
             border: none;
             height: 80px; /* Adjust height if needed */
-        }
-
-        /* Toggle switch styling */
-        .mode-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .mode-switch input {
-            display: none;
-        }
-
-        .mode-switch-label {
-            font-size: 18px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-
-        .mode-switch-label::before {
-            content: "\2600"; /* ☀ Symbol für Light Mode */
-            margin-right: 5px;
-        }
-
-        .dark-mode .mode-switch-label::before {
-            content: "\1F319"; /* 🌙 Symbol für Dark Mode */
+            overflow: hidden; /* Prevent scrolling */
         }
     </style>
 </head>
@@ -152,39 +124,6 @@
 
     <!-- Footer frame section -->
     <iframe src="../dock" class="footer-frame"></iframe>
-
-    <!-- Dark/Light Mode Switch -->
-    <div class="mode-switch">
-        <input type="checkbox" id="mode-switch" />
-        <label for="mode-switch" class="mode-switch-label" onclick="toggleMode()">
-            Dark/Light Mode
-        </label>
-    </div>
-
-    <script>
-        // Funktion zum Umschalten des Modus (Dark/Light)
-        function toggleMode() {
-            const modeSwitch = document.getElementById('mode-switch');
-            if (modeSwitch.checked) {
-                document.body.classList.add('dark-mode');
-                // Speichern des Modus in Cookies
-                document.cookie = "mode=dark; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-            } else {
-                document.body.classList.remove('dark-mode');
-                // Speichern des Modus in Cookies
-                document.cookie = "mode=light; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-            }
-        }
-
-        // Beim Laden der Seite überprüfen, ob ein gespeicherter Modus vorhanden ist
-        window.onload = function() {
-            const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)mode\s*=\s*([^;]*).*$)|^.*$/, "$1");
-            if (cookieValue === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.getElementById('mode-switch').checked = true;
-            }
-        };
-    </script>
 </body>
 </html>
 

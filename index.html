@@ -41,6 +41,11 @@
             transform: translateX(-50%);
             display: flex;
             gap: 20px;
+            padding: 10px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
         }
 
         .menu-item {
@@ -52,6 +57,11 @@
             text-decoration: none;
             font-size: 1.2em;
             cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item a:hover {
+            color: #0f0;
         }
 
         .dropdown-content {
@@ -60,8 +70,10 @@
             top: 25px;
             left: 0;
             background-color: #1e1e1e;
+            border-radius: 5px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
+            animation: fadeIn 0.3s ease;
         }
 
         .dropdown-content a {
@@ -69,6 +81,8 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
         .dropdown-content a:hover {
@@ -77,6 +91,12 @@
 
         .menu-item:hover .dropdown-content {
             display: block;
+        }
+
+        /* Keyframes for fadeIn animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* Main content area styling */
@@ -105,7 +125,7 @@
             color: white;
             background-color: #1e1e1e;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none; /* Ensure no underline */
@@ -115,7 +135,7 @@
         }
 
         .button:hover {
-            transform: rotate(10deg);
+            transform: scale(1.1);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
@@ -156,6 +176,20 @@
                 <div class="dropdown-content">
                     <a href="https://home.papertobi.de">Home Assistant</a>
                     <a href="../minecraft">Minecraft</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="#">Coming Soon 1</a>
+                <div class="dropdown-content">
+                    <a href="#">Project X</a>
+                    <a href="#">Project Y</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="#">Coming Soon 2</a>
+                <div class="dropdown-content">
+                    <a href="#">Project A</a>
+                    <a href="#">Project B</a>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@
             padding: 0;
             height: 100%;
             font-family: 'Arial', sans-serif;
-            background-color: #000000;
+            background-color: #121212;
             color: #ffffff;
         }
 
@@ -27,29 +27,55 @@
 
         .header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 3.5em;
             color: #ffffff;
             cursor: pointer;
+            transition: text-shadow 0.3s ease;
+        }
+
+        .header h1:hover {
+            text-shadow: 0 0 10px #ffffff;
         }
 
         .menu-band {
             display: flex;
             justify-content: center;
-            padding: 10px 0;
-            background-color: #111111;
+            padding: 15px 0;
+            background-color: #1E1E1E;
         }
 
         .menu-band a {
             color: #ffffff;
             text-decoration: none;
             padding: 10px 20px;
-            margin: 0 5px;
-            transition: background-color 0.3s ease;
+            margin: 0 10px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .menu-band a:hover, .menu-band a.active {
-            background-color: #333333;
+        .menu-band a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
         }
+
+        .menu-band a:hover:before {
+            transform: translateX(0);
+        }
+
+        .menu-band a.minecraft { background-color: #4CAF50; }
+        .menu-band a.projekt2 { background-color: #2196F3; }
+        .menu-band a.projekt3 { background-color: #F44336; }
+        .menu-band a.projekt4 { background-color: #FF9800; }
+        .menu-band a.projekt5 { background-color: #9C27B0; }
 
         .content {
             flex: 1;
@@ -60,11 +86,18 @@
         }
 
         .cool-box {
-            background-color: #111111;
+            background-color: #1E1E1E;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 15px;
             max-width: 800px;
             width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cool-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
         .cool-box h2 {
@@ -74,7 +107,7 @@
 
         #dock-frame {
             width: 100%;
-            height: 50px;
+            height: 60px;
             border: none;
         }
     </style>
@@ -85,18 +118,18 @@
             <h1 onclick="window.location.href='https://papertobi.de'">PaperTobi</h1>
         </div>
         <div class="menu-band">
-            <a href="https://papertobi.de/minecraft" class="active">Minecraft</a>
-            <a href="#">Projekt 2</a>
-            <a href="#">Projekt 3</a>
-            <a href="#">Projekt 4</a>
-            <a href="#">Projekt 5</a>
+            <a href="https://papertobi.de/minecraft" class="minecraft">Minecraft</a>
+            <a href="#" class="projekt2">Projekt 2</a>
+            <a href="#" class="projekt3">Projekt 3</a>
+            <a href="#" class="projekt4">Projekt 4</a>
+            <a href="#" class="projekt5">Projekt 5</a>
         </div>
         <div class="content">
             <div class="cool-box">
-                <h2>Willkommen bei PaperTobi!</h2>
-                <p>Hey, ich bin Tobi - ein leidenschaftlicher Entwickler und Minecraft-Enthusiast. Meine Kreativität und technisches Know-how vereinen sich in spannenden Projekten, die du hier entdecken kannst.</p>
+                <h2>Hey, ich bin Tobi!</h2>
+                <p>Als leidenschaftlicher Entwickler und Minecraft-Enthusiast verbinde ich Kreativität mit technischem Know-how in spannenden Projekten.</p>
                 <p>Von innovativen Minecraft-Mods bis hin zu coolen Webprojekten - hier findest du meine digitale Spielwiese. Tauche ein in meine Welt der Programmierung, des Gamings und der ständigen Weiterentwicklung.</p>
-                <p>Schau dich um, entdecke meine Projekte und lass dich inspirieren. Vielleicht findest du hier genau das, wonach du gesucht hast, oder sogar etwas, von dem du nicht wusstest, dass du es brauchst!</p>
+                <p>Schau dich um und entdecke meine Projekte. Vielleicht findest du hier genau das, wonach du suchst, oder sogar etwas, von dem du nicht wusstest, dass du es brauchst!</p>
                 <p>Viel Spaß beim Erkunden!</p>
             </div>
         </div>

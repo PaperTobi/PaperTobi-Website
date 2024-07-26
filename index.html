@@ -2,30 +2,42 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaperTobi</title>
-    <link rel="icon" type="image/x-icon" href="/logos/PaperTobi/PaperTobi.ico">
     <link rel="stylesheet" href="https://papertobi.de/style.css">
 </head>
 <body>
-    <!-- Header section -->
-    <div class="header">
-        <h1 onclick="window.location.href='..'">PaperTobi</h1>
-    </div>
-
-    <!-- Main content section -->
-    <div class="content">
-        <div class="button-container">
-            <button class="button button-home" onclick="window.location.href='https://home.papertobi.de'">Home Assistant</button>
-            <button class="button button-minecraft" onclick="window.location.href='../minecraft'">Minecraft</button>
-            <button class="button button-project2">Projekt 2</button>
-        </div>
-        <div class="image-container">
-            <img src="logos/PaperTobi/PaperTobi.png" alt="PaperTobi Logo">
-        </div>
-    </div>
-
-    <!-- Dock (embedded footer) section -->
-    <iframe src="https://papertobi.de/dock" class="dock" style="width: 100%; height: 100px; border: none;"></iframe>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#services">Dienstleistungen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Willkommen bei PaperTobi</h1>
+            <p>Hier finden Sie alle Informationen über unsere Dienstleistungen und Angebote.</p>
+        </section>
+        <section id="about">
+            <h2>Über uns</h2>
+            <p>Wir sind PaperTobi, spezialisiert auf Papierprodukte und -lösungen.</p>
+        </section>
+        <section id="services">
+            <h2>Unsere Dienstleistungen</h2>
+            <p>Erfahren Sie mehr über unsere vielfältigen Dienstleistungen im Bereich Papierverarbeitung.</p>
+        </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Kontaktieren Sie uns, um mehr über unsere Angebote zu erfahren.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PaperTobi. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>
 

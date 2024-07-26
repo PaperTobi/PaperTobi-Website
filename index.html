@@ -53,29 +53,45 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            background-color: #333;
         }
 
         .menu-band a:before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,255,255,0.1);
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s;
         }
 
         .menu-band a:hover:before {
-            transform: translateX(0);
+            opacity: 1;
+            animation: glowing 20s linear infinite;
         }
 
-        .menu-band a.minecraft { background-color: #4CAF50; }
-        .menu-band a.projekt2 { background-color: #2196F3; }
-        .menu-band a.projekt3 { background-color: #F44336; }
-        .menu-band a.projekt4 { background-color: #FF9800; }
-        .menu-band a.projekt5 { background-color: #9C27B0; }
+        .menu-band a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .menu-band a:hover.minecraft { background-color: #4CAF50; }
+        .menu-band a:hover.projekt2 { background-color: #2196F3; }
+        .menu-band a:hover.projekt3 { background-color: #F44336; }
+        .menu-band a:hover.projekt4 { background-color: #FF9800; }
+        .menu-band a:hover.projekt5 { background-color: #9C27B0; }
+
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
 
         .content {
             flex: 1;
@@ -126,11 +142,11 @@
         </div>
         <div class="content">
             <div class="cool-box">
-                <h2>Hey, ich bin Tobi!</h2>
-                <p>Als leidenschaftlicher Entwickler und Minecraft-Enthusiast verbinde ich Kreativität mit technischem Know-how in spannenden Projekten.</p>
-                <p>Von innovativen Minecraft-Mods bis hin zu coolen Webprojekten - hier findest du meine digitale Spielwiese. Tauche ein in meine Welt der Programmierung, des Gamings und der ständigen Weiterentwicklung.</p>
-                <p>Schau dich um und entdecke meine Projekte. Vielleicht findest du hier genau das, wonach du suchst, oder sogar etwas, von dem du nicht wusstest, dass du es brauchst!</p>
-                <p>Viel Spaß beim Erkunden!</p>
+                <h2>Yo, ich bin Tobi!</h2>
+                <p>Willkommen in meiner digitalen Höhle des Wahnsinns! 🎮👨‍💻</p>
+                <p>Wenn ich nicht gerade versuche, Minecraft neu zu erfinden oder dem Internet beizubringen, wie man Witze erzählt, bastle ich an Projekten, die so cool sind, dass sie Eisbären zum Schwitzen bringen.</p>
+                <p>Schau dich um, aber pass auf! Meine Codes sind so heiß, sie könnten deinen Bildschirm zum Schmelzen bringen. Und wenn du denkst, du hättest alles gesehen, warte ab, bis du meine "Projekt 2" bis "Projekt 5" checkst - die sind so mysteriös, selbst ich weiß noch nicht, was sich dahinter verbirgt!</p>
+                <p>Also, schnall dich an und genieß die Fahrt durch meine verrückte Welt der Pixel und Polygone. Und denk dran: Hier gibt's keine Bugs, nur ungeplante Features! 😜🚀</p>
             </div>
         </div>
         <iframe id="dock-frame" src="https://papertobi.de/dock"></iframe>

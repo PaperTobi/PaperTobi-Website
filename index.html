@@ -128,37 +128,13 @@
             font-size: 2em;
         }
 
-        .dock {
-            width: 100%;
-            background-color: rgba(30, 30, 30, 0.8);
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
+        #dock-frame {
             position: fixed;
             bottom: 0;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
-        }
-
-        .dock button {
-            padding: 12px 25px;
-            font-size: 16px;
-            color: white;
-            background-color: #18bcf2;
+            left: 0;
+            width: 100%;
+            height: 60px;
             border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .dock button:hover {
-            background-color: #1e90ff;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -183,9 +159,6 @@
             <p>Entdecken Sie meine verschiedenen Projekte im Menüband oben.</p>
         </div>
     </div>
-    <div class="dock">
-        <button onclick="window.location.href='https://papertobi.de'">Home</button>
-        <button onclick="window.location.href='https://papertobi.de/kontakt'">Kontakt</button>
-    </div>
+    <iframe id="dock-frame" src="https://papertobi.de/dock"></iframe>
 </body>
 </html>

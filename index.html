@@ -49,11 +49,11 @@
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
-            border-radius: 10px; /* Angepasste abgerundete Ecken */
+            border-radius: 10px; /* Leicht abgerundete Ecken */
             transition: all 0.3s ease, background-color 0.3s ease;
             position: relative;
             overflow: hidden;
-            background-color: #333;
+            background-color: #4CAF50; /* Grüne Hintergrundfarbe */
         }
 
         .menu-band a:before {
@@ -63,7 +63,7 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            background: linear-gradient(45deg, #3D8B37, #3D8B37, #3D8B37, #3D8B37);
             background-size: 400%;
             z-index: -1;
             filter: blur(5px);
@@ -74,18 +74,13 @@
         .menu-band a:hover {
             transform: translateY(-5px) scale(1.1); /* Vergrößerte Animation */
             box-shadow: 0 5px 15px rgba(255,255,255,0.3); /* Intensivere Schatten */
+            background-color: #45A049; /* Dunkleres Grün bei Hover */
         }
 
         .menu-band a:hover:before {
             opacity: 1;
             animation: glowing 10s linear infinite; /* Schnellere Animation */
         }
-
-        .menu-band a:hover.minecraft { background-color: #4CAF50; }
-        .menu-band a:hover.projekt2 { background-color: #2196F3; }
-        .menu-band a:hover.projekt3 { background-color: #F44336; }
-        .menu-band a:hover.projekt4 { background-color: #FF9800; }
-        .menu-band a:hover.projekt5 { background-color: #9C27B0; }
 
         @keyframes glowing {
             0% { background-position: 0 0; }

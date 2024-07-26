@@ -49,7 +49,7 @@
             text-decoration: none;
             padding: 10px 20px;
             margin: 0 10px;
-            border-radius: 25px;
+            border-radius: 10px; /* Angepasste abgerundete Ecken */
             transition: all 0.3s ease, background-color 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -72,13 +72,13 @@
         }
 
         .menu-band a:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+            transform: translateY(-5px) scale(1.1); /* Vergrößerte Animation */
+            box-shadow: 0 5px 15px rgba(255,255,255,0.3); /* Intensivere Schatten */
         }
 
         .menu-band a:hover:before {
             opacity: 1;
-            animation: glowing 20s linear infinite;
+            animation: glowing 10s linear infinite; /* Schnellere Animation */
         }
 
         .menu-band a:hover.minecraft { background-color: #4CAF50; }
@@ -153,3 +153,4 @@
     </div>
 </body>
 </html>
+

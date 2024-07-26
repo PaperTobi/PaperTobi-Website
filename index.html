@@ -2,209 +2,86 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>PaperTobi</title>
-    <link rel="icon" type="image/x-icon" href="https://cdn.papertobi.de/logos/PaperTobi.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krasse Webseite</title>
     <style>
-        /* Basic body styling */
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 100vh;
-            background-color: #121212;
-            color: #ffffff;
             margin: 0;
             font-family: Arial, sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
 
-        /* Header styling */
-        .header {
-            text-align: center;
-            margin-top: 20px;
-            position: relative;
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #18bcf2; 
-            cursor: pointer;
-        }
-
-        /* Menu styling */
-        .menu {
-            display: flex;
-            gap: 20px;
-            padding: 10px;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-            z-index: 1;
-        }
-
-        .menu-item {
-            position: relative;
-        }
-
-        .menu-item a {
-            color: #18bcf2;
-            text-decoration: none;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .menu-item a:hover {
-            color: #0f0;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%; /* Ensures the dropdown appears below the menu item */
-            left: 0;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            animation: fadeIn 0.3s ease;
-            overflow: hidden;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #575757;
-            transform: rotate(10deg);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        }
-
-        .menu-item:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Keyframes for fadeIn animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Main content area styling */
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        /* Button container styling */
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        /* General button styling */
-        .button {
-            padding: 15px 25px;
-            font-size: 18px;
-            color: white;
-            background-color: #1e1e1e;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none; /* Ensure no underline */
-            display: flex;
-            align-items: center; /* Center align text and any icons */
-            justify-content: center;
-        }
-
-        .button:hover {
-            transform: rotate(10deg);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        }
-
-        /* Specific button hover effects */
-        .button-home:hover {
-            background-color: #18bcf2;
-            box-shadow: 0 0 15px #18bcf2;
-        }
-
-        .button-minecraft:hover {
-            background-color: #0f0;
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-        }
-
-        /* IFrame styling for the footer */
-        .footer-frame {
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            position: fixed;
             width: 100%;
-            border: none;
-            height: 80px; /* Adjust height if needed */
-            overflow: hidden; /* Prevent scrolling */
+            top: 0;
         }
 
-        /* Responsive styling */
-        @media (min-width: 600px) {
-            .button-container {
-                flex-direction: row;
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header section -->
-    <div class="header">
-        <h1 onclick="window.location.href='..'">PaperTobi</h1>
-        <div class="menu">
-            <div class="menu-item">
-                <a href="#">Projekte</a>
-                <div class="dropdown-content">
-                    <a href="https://home.papertobi.de">Home Assistant</a>
-                    <a href="../minecraft">Minecraft</a>
-                </div>
-            </div>
-            <div class="menu-item">
-                <a href="#">Coming Soon 1</a>
-                <div class="dropdown-content">
-                    <a href="#">Project X</a>
-                    <a href="#">Project Y</a>
-                </div>
-            </div>
-            <div class="menu-item">
-                <a href="#">Coming Soon 2</a>
-                <div class="dropdown-content">
-                    <a href="#">Project A</a>
-                    <a href="#">Project B</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">Über uns</a>
+        <a href="#services">Leistungen</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
 
-    <!-- Main content section -->
     <div class="content">
-        <div class="button-container">
-            <button class="button button-home" onclick="window.location.href='https://home.papertobi.de'">Home Assistant</button>
-            <button class="button button-minecraft" onclick="window.location.href='../minecraft'">Minecraft</button>
-        </div>
+        <h1>Willkommen auf unserer krassen Webseite!</h1>
+        <p>Hier finden Sie coole Animationen und ein stylisches Design.</p>
     </div>
-
-    <!-- Footer frame section -->
-    <iframe src="../dock" class="footer-frame"></iframe>
 </body>
 </html>
-

@@ -14,7 +14,7 @@ body {
 
 .top-dock {
     width: 100%;
-    height: 120px; /* Erhöhte Höhe für die obere Leiste */
+    height: 120px; /* Höhe für die obere Leiste */
     overflow: hidden;
 }
 
@@ -23,13 +23,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 4rem; /* Größere Schriftgröße für größere Bildschirme */
     font-weight: bold;
+    padding: 0 20px; /* Innenabstand für kleinere Bildschirme */
+    box-sizing: border-box;
 }
 
 .bottom-dock {
     width: 100%;
-    height: 80px;
+    height: 80px; /* Höhe für die untere Leiste */
     overflow: hidden;
 }
 
@@ -41,5 +43,36 @@ iframe {
 
 #bottom-dock {
     border-radius: 15px 15px 0 0;
+}
+
+/* Medienabfragen für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .top-dock {
+        height: 80px; /* Reduzierte Höhe für kleinere Bildschirme */
+    }
+
+    .content {
+        font-size: 2.5rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+        padding: 0 10px; /* Reduzierter Innenabstand */
+    }
+
+    .bottom-dock {
+        height: 60px; /* Reduzierte Höhe für kleinere Bildschirme */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-dock {
+        height: 60px; /* Noch kleinere Höhe für sehr kleine Bildschirme */
+    }
+
+    .content {
+        font-size: 1.5rem; /* Noch kleinere Schriftgröße */
+        padding: 0 5px; /* Noch reduzierter Innenabstand */
+    }
+
+    .bottom-dock {
+        height: 50px; /* Noch kleinere Höhe */
+    }
 }
 

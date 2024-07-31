@@ -2,59 +2,47 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PaperTobi Dock</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Roboto', sans-serif;
             background-color: #1E1E1E;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .dock {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
         }
         .dock button {
-            padding: 10px 20px;
+            padding: 0.5rem 1rem;
             font-size: 16px;
             color: white;
-            background-color: #333333;
+            background-color: #1e1e1e;
             border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            border-radius: 25px;
-            position: relative;
-            overflow: hidden;
-        }
-        .dock button:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,255,255,0.1);
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-        }
-        .dock button:hover:before {
-            transform: translateX(0);
+            border-radius: 10px;
+            text-decoration: none;
         }
         .dock button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #333333;
         }
     </style>
 </head>
 <body>
     <div class="dock">
-        <button onclick="parent.location.href='https://papertobi.de'">Home</button>
-        <button onclick="parent.location.href='https://papertobi.de/kontakt'">Kontakt</button>
+        <button onclick="location.href='https://papertobi.de'">Home</button>
+        <button onclick="location.href='https://papertobi.de/kontakt'">Kontakt</button>
     </div>
 </body>
 </html>
+

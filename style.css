@@ -1,4 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Remove the Google Fonts import */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+/* Add local font-face declarations */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/roboto/roboto-400.woff2') format('woff2'),
+         url('./fonts/roboto/roboto-400.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/roboto/roboto-700.woff2') format('woff2'),
+         url('./fonts/roboto/roboto-700.woff') format('woff');
+}
 
 body {
     margin: 0;
@@ -75,4 +93,3 @@ iframe {
         height: 50px; /* Noch kleinere Höhe */
     }
 }
-

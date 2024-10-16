@@ -1,24 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://cdn.papertobi.de/logos/PaperTobi/PaperTobi.ico">
-    <title>PaperTobi</title>
+    <title>PaperTobi - Hobby Coder</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.papertobi.de/logos/PaperTobi/PaperTobi.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="top-dock">
-        <iframe src="https://papertobi.de/menu/up" frameborder="0"></iframe>
-    </div>
+    <header>
+        <nav>
+            <img src="https://cdn.papertobi.de/logos/PaperTobi/PaperTobi.png" alt="PaperTobi Logo" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="content">
-        PaperTobi
-    </div>
+    <main>
+        <section id="home" class="hero">
+            <h1 class="animate-text">Willkommen bei PaperTobi</h1>
+            <p class="animate-text">Hobby-Coder mit Leidenschaft für innovative Projekte</p>
+        </section>
 
-    <div class="bottom-dock">
-        <iframe src="https://papertobi.de/menu/down" frameborder="0" id="bottom-dock"></iframe>
-    </div>
+        <section id="about" class="about">
+            <h2>Über mich</h2>
+            <p>Hallo! Ich bin PaperTobi, ein leidenschaftlicher Hobby-Programmierer. Ich liebe es, kreative Codeprojekte zu entwickeln und neue Technologien zu erkunden.</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Meine Projekte</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Projekt 1</h3>
+                    <p>Beschreibung des ersten Projekts.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Projekt 2</h3>
+                    <p>Beschreibung des zweiten Projekts.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Projekt 3</h3>
+                    <p>Beschreibung des dritten Projekts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Kontakt</h2>
+            <p>Möchten Sie mit mir in Kontakt treten? Schreiben Sie mir eine Nachricht!</p>
+            <a href="mailto:contact@papertobi.de" class="cta-button">E-Mail senden</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PaperTobi. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>
-

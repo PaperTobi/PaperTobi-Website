@@ -3,41 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PaperTobi - Hobby Coder Extraordinaire</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://cdn.papertobi.de/logos/PaperTobi/PaperTobi.ico" type="image/x-icon">
+    <title>PaperTobi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <header>
-        <nav>
-            <img src="https://cdn.papertobi.de/logos/PaperTobi/PaperTobi.png" alt="PaperTobi Logo" class="logo">
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link">Projekte</a></li>
-                <li><a href="about.html" class="nav-link">Über mich</a></li>
-                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Sternenhimmel Container -->
+    <div class="stars" id="stars"></div>
 
-    <main>
-        <section id="home" class="hero">
-            <h1 class="glitch" data-text="PaperTobi">PaperTobi</h1>
-            <p class="subtitle">Code. Create. Innovate.</p>
-            <div class="social-links">
-                <a href="https://github.com/papertobi" target="_blank" class="social-link">GitHub</a>
-                <a href="https://twitter.com/papertobi" target="_blank" class="social-link">Twitter</a>
-                <a href="https://www.linkedin.com/in/papertobi" target="_blank" class="social-link">LinkedIn</a>
-                <a href="https://www.instagram.com/papertobi" target="_blank" class="social-link">Instagram</a>
-                <a href="https://www.youtube.com/papertobi" target="_blank" class="social-link">YouTube</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="logo">
+            <img src="https://cdn.papertobi.de/logos/PaperTobi/PaperTobi.png" alt="PaperTobi Logo">
+        </div>
+        <div class="nav-links">
+            <a href="/about" class="nav-item">About</a>
+            <div class="dropdown nav-item">
+                <span class="dropdown-trigger">Mehr</span>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">Platzhalter 1</a>
+                    <a href="#" class="dropdown-item">Platzhalter 2</a>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </nav>
 
-    <footer>
-        <p>&copy; 2024 PaperTobi. Pushing the boundaries of code.</p>
-    </footer>
+    <!-- Haupttitel -->
+    <div class="title-container">
+        <h1 class="main-title">PaperTobi</h1>
+    </div>
+
+    <script>
+        // Sternenhimmel Animation
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 200;
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 2}s`;
+                starsContainer.appendChild(star);
+            }
+        }
+
+        createStars();
+    </script>
 </body>
 </html>
